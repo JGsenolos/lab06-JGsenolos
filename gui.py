@@ -14,7 +14,17 @@ def calculate():
     # TODO: read the bill amount with entry.get() and turn it into a float. Work out
     #   a 15% tip and the total (bill + tip). Then show them, e.g.:
     #       result.config(text="Tip: $1.50   Total: $11.50")
-    pass
+
+    # Get the text from the entry widget and convert it to a float
+    bill_amount = float(entry.get())
+
+    # Calculate the tip and total
+    tip = bill_amount * 0.15
+    total = bill_amount + tip
+
+    # Update the result label
+    result.config(text=f"Tip: ${tip:.2f}   Total: ${total:.2f}")
+
 
 
 root = tk.Tk()
